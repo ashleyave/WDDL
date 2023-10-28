@@ -1,3 +1,17 @@
+<?php 
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true){
+    echo '<script type="text/JavaScript">';
+    echo 'alert("Please Login, you will be redirected to login page.");';
+    echo '</script>'; 
+    ?>
+    <script type ="text/Javascript">
+        window.location='login.html'; //redirect to login.html
+    </script>
+    <?php
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
